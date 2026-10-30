@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABCM - 5-4-5-4-3 With Captions</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Arial,sans-serif;background:#f0f2f8;line-height:1.6}
+  .top-header{display:flex;align-items:center;justify-content:space-between;padding:15px 5%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:relative;z-index:1000}
+  .logo{width:20%;font-weight:800;font-size:22px;color:#0a1931;text-decoration:none}
+  .main-nav{width:60%;display:flex;justify-content:center}
+  .nav-links{display:flex;gap:30px;list-style:none}
+  .nav-links a{text-decoration:none;color:#333}
+  .book-btn{width:20%;text-align:right}
+  .book-btn a{text-decoration:none;background:#0a1931;color:#fff;padding:11px 22px;border-radius:6px;font-weight:700;display:inline-block}
+  .menu-toggle{display:none;background:none;border:none;font-size:28px}
+  @media(max-width:768px){.menu-toggle{display:block}.main-nav{display:none;position:absolute;top:100%;left:0;width:100%;background:#0a1931;padding:20px}.main-nav.show{display:flex}.nav-links{flex-direction:column}.nav-links a{color:#fff}.desktop-only{display:none}}
+
+  .main-wrapper{display:flex;gap:30px;padding:30px 5%;max-width:1400px;margin:0 auto;align-items:flex-start}
+  .left-content{width:70%;background:#fff;border-radius:16px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+  .right-sidebar{width:30%;position:sticky;top:20px}
+
+  /* ===== CREATIVE 5-4-5-4-3 WITH CAPTION ===== */
+  .creative-gallery{display:flex;flex-direction:column;gap:20px}
+  .row{display:grid;gap:16px}
+  .row-5{grid-template-columns:repeat(5,1fr)}
+  .row-4{grid-template-columns:repeat(4,1fr)}
+  .row-3{grid-template-columns:repeat(3,1fr);max-width:85%;margin:0 auto;width:100%}
+
+  .pic-box{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #eef2f7;
+    transition:.3s;
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+  }
+  .pic-box:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.12);border-color:#0a1931}
+  .pic-box img{width:100%;display:block;object-fit:cover}
+  .row-5 .pic-box img{height:120px}
+  .row-4 .pic-box img{height:160px}
+  .row-3 .pic-box img{height:200px}
+
+  .caption{
+    padding:10px 10px 12px;
+    background:#fff;
+  }
+  .caption strong{
+    display:block;
+    font-size:12px;
+    color:#0a1931;
+    line-height:1.2;
+    margin-bottom:2px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .caption span{
+    font-size:10px;
+    color:#888;
+    display:block;
+    line-height:1.2;
+  }
+
+  .activity-box{background:#fff;border-radius:12px;padding:25px;box-shadow:0 4px 20px rgba(0,0,0,.05);border-left:4px solid #0a1931}
+  .activity-list{list-style:none}
+  .activity-list li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #f0f3f8;font-size:14px}
+  .check{min-width:22px;height:22px;background:#0a1931;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
+
+  @media(max-width:900px){.main-wrapper{flex-direction:column}.left-content,.right-sidebar{width:100%}}
+  @media(max-width:600px){
+    .row-5{grid-template-columns:repeat(2,1fr)}
+    .row-4{grid-template-columns:repeat(2,1fr)}
+    .row-3{grid-template-columns:1fr;max-width:100%}
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <a href="/" class="logo">ABCM Academy</a>
+  <nav class="main-nav" id="mainNav"><ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/about">About</a></li><li><a href="/admission">Admission</a></li><li><a href="/contact">Contact</a></li></ul></nav>
+  <div class="book-btn desktop-only"><a href="/portal">Portal</a></div>
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</header>
+
+<main class="main-wrapper">
+  <section class="left-content">
+    <h2 style="color:#0a1931;margin-bottom:20px;">Gallery - 5, 4, 5, 4, 3 with Caption</h2>
+
+    <div class="creative-gallery">
+      <!-- ROW 1 - 5 PICTURES -->
+      <div class="row row-5">
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop"><div class="caption"><strong>Classroom Block</strong><span>30 Students Capacity</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=300&fit=crop"><div class="caption"><strong>E-Library</strong><span>5000+ Books</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"><div class="caption"><strong>Students</strong><span>Active Learning</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1588075592446-265fd1e4e76f?w=400&h=300&fit=crop"><div class="caption"><strong>Computer Lab</strong><span>50 Systems</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&h=300&fit=crop"><div class="caption"><strong>Assembly</strong><span>Morning Assembly</span></div></div>
+      </div>
+
+      <!-- ROW 2 - 4 PICTURES -->
+      <div class="row row-4">
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&h=400&fit=crop"><div class="caption"><strong>Science Lab</strong><span>Fully Equipped Lab</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=400&fit=crop"><div class="caption"><strong>Study Time</strong><span>Focused Learning</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=400&fit=crop"><div class="caption"><strong>Tech Class</strong><span>HTML to React</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=400&fit=crop"><div class="caption"><strong>Group Work</strong><span>Collaboration</span></div></div>
+      </div>
+
+      <!-- ROW 3 - 5 PICTURES -->
+      <div class="row row-5">
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop"><div class="caption"><strong>Graduation</strong><span>2025 Set</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1531482615713-2afd690979bc?w=400&h=300&fit=crop"><div class="caption"><strong>Workshop</strong><span>Design Workshop</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&h=300&fit=crop"><div class="caption"><strong>Teaching</strong><span>Expert Teachers</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?w=400&h=300&fit=crop"><div class="caption"><strong>Learning</strong><span>Smart Boards</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"><div class="caption"><strong>Team ABCM</strong><span>Staff & Students</span></div></div>
+      </div>
+
+      <!-- ROW 4 - 4 PICTURES -->
+      <div class="row row-4">
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=400&fit=crop"><div class="caption"><strong>Hostel</strong><span>Safe & Clean</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&h=400&fit=crop"><div class="caption"><strong>Reading</strong><span>Reading Culture</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1516534775068-ba3e7458af70?w=500&h=400&fit=crop"><div class="caption"><strong>Future</strong><span>Future Leaders</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=500&h=400&fit=crop"><div class="caption"><strong>Innovation</strong><span>K4Success Built</span></div></div>
+      </div>
+
+      <!-- ROW 5 - 3 PICTURES - CENTER -->
+      <div class="row row-3">
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"><div class="caption"><strong>Web Design</strong><span>By K4Success</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop"><div class="caption"><strong>ABCM Academy</strong><span>Best Private School</span></div></div>
+        <div class="pic-box"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop"><div class="caption"><strong>Admissions Open</strong><span>2026/2027 Session</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="right-sidebar">
+    <div class="activity-box">
+      <h3>📌 Key Activities</h3>
+      <ul class="activity-list">
+        <li><span class="check">✓</span> Admission Open 2026/27</li>
+        <li><span class="check">✓</span> Design Workshop Sat 10AM</li>
+        <li><span class="check">✓</span> Web Dev Training</li>
+        <li><span class="check">✓</span> Result Portal Live</li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<script>
+const toggle=document.getElementById('menuToggle');const nav=document.getElementById('mainNav');
+toggle.addEventListener('click',()=>{nav.classList.toggle('show');toggle.textContent=nav.classList.contains('show')?'✕':'☰';});
+</script>
+</body>
+</html>
